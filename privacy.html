@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy – Mood2Meal</title>
+  <meta name="description" content="What data Mood2Meal collects, how it is used, and your rights." />
+  <link rel="canonical" href="https://mood2meal.com/privacy" />
+  <meta name="theme-color" content="#fafaf5" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#121411" media="(prefers-color-scheme: dark)" />
+  <link rel="icon" type="image/png" href="assets/icon-64.png" />
+  <link rel="apple-touch-icon" href="assets/icon-180.png" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="./" aria-label="Mood2Meal home">
+        <img src="assets/icon-64.png" alt="" width="36" height="36" />
+        <span>Mood2Meal</span>
+      </a>
+      <nav class="nav" aria-label="Main">
+        <a href="support.html">Support</a>
+        <a href="privacy.html" aria-current="page">Privacy</a>
+        <a href="terms.html">Terms</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="doc">
+    <div class="wrap narrow">
+      <span class="eyebrow">Legal</span>
+      <h1>Privacy Policy</h1>
+      <p class="updated">Last updated: June 2026</p>
+
+      <p class="lede">
+        Mood2Meal respects your privacy. This policy explains what data we collect,
+        how we use it, and your rights.
+      </p>
+
+      <div class="card">
+        <h2>What We Collect</h2>
+        <ul>
+          <li><strong>Account info</strong> — Email address and display name, stored securely in Supabase.</li>
+          <li><strong>Preferences</strong> — Dietary needs, allergies, cuisine preferences, household size, and skill level. Stored locally on your device and synced to your account.</li>
+          <li><strong>Usage data</strong> — Recipes you save, cook, or skip. Used solely to improve your meal recommendations.</li>
+          <li><strong>Purchase information</strong> — Your subscription status, managed by RevenueCat and Apple. We never see your payment details.</li>
+          <li><strong>Crash &amp; diagnostic data</strong> — Anonymous crash reports via Sentry so we can fix bugs. You can turn this off any time in Settings › Crash &amp; Error Reporting.</li>
+          <li><strong>No advertising or tracking</strong> — No ad SDKs, no cross-app tracking, and we never sell your data to anyone.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>How We Use Your Data</h2>
+        <ul>
+          <li>To generate personalised meal recommendations via AI.</li>
+          <li>To save your preferences and cooking history across devices.</li>
+          <li>To process your subscription (if you choose Premium).</li>
+          <li>To diagnose and fix crashes (only if crash reporting is enabled).</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>AI Recipe Generation</h2>
+        <p>
+          When you request a meal, your mood selection and food preferences (such as dietary
+          needs, allergies, and available equipment) are sent to Anthropic's Claude API to
+          generate a recipe. This data is not used to train AI models. We do not send your
+          name, email, or account details with these requests.
+        </p>
+      </div>
+
+      <div class="card">
+        <h2>Data Storage &amp; Security</h2>
+        <ul>
+          <li>Account data is stored in Supabase (hosted on AWS) with Row-Level Security.</li>
+          <li>Preferences are stored locally on your device via AsyncStorage.</li>
+          <li>All network communication uses HTTPS encryption.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>Your Rights</h2>
+        <ul>
+          <li><strong>Access</strong> — View all stored data in Settings › What We Store.</li>
+          <li><strong>Delete</strong> — Delete your account and all associated data in Settings › Delete Account.</li>
+          <li><strong>Portability</strong> — Use Export My Data in Settings, or contact us for a copy of your data.</li>
+          <li><strong>Opt out</strong> — Disable crash reporting in Settings › Crash &amp; Error Reporting.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>Third-Party Services</h2>
+        <ul>
+          <li>Supabase — database &amp; authentication</li>
+          <li>Anthropic Claude — AI recipe generation (prompts are not used for model training)</li>
+          <li>RevenueCat — subscription management &amp; receipt validation</li>
+          <li>Sentry — crash &amp; error reporting (optional, can be disabled in Settings)</li>
+          <li>Apple App Store — subscription billing</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>Children</h2>
+        <p>Mood2Meal is not directed at children under 13. We do not knowingly collect data from children.</p>
+      </div>
+
+      <div class="card">
+        <h2>Changes</h2>
+        <p>We may update this policy. Material changes will be communicated through the app.</p>
+      </div>
+
+      <div class="card">
+        <h2>Contact</h2>
+        <p>Questions? Email us at <a href="mailto:support@mood2meal.com">support@mood2meal.com</a></p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <span>© 2026 Mood2Meal. All rights reserved.</span>
+      <nav aria-label="Footer">
+        <a href="support.html">Support</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="delete-account.html">Delete account</a>
+        <a href="mailto:support@mood2meal.com">support@mood2meal.com</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>
