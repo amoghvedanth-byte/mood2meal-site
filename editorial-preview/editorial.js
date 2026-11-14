@@ -1,0 +1,1 @@
+document.querySelector('.meal-stage').addEventListener('keydown',function(e){if(e.key==='ArrowRight'||e.key==='ArrowLeft'){e.preventDefault();this.scrollBy({left:(e.key==='ArrowRight'?1:-1)*this.querySelector('figure').getBoundingClientRect().width,behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'});}});
