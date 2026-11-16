@@ -54,8 +54,9 @@
         <h2>What We Collect</h2>
         <ul>
           <li><strong>Account info</strong> — Email address and display name, stored securely in Supabase.</li>
-          <li><strong>Preferences</strong> — Dietary needs, allergies, cuisine preferences and the kitchen equipment you own. Stored only on your device.</li>
-          <li><strong>Usage data</strong> — Recipes you save and cook, the feedback you give on a recipe after cooking it, and any recipe you report (with the optional note you write). Used to improve your recommendations and to keep the recipe library accurate and safe.</li>
+          <li><strong>Preferences</strong> — Dietary needs, allergies, cuisine preferences and the kitchen equipment you own. If you have an account, these are kept with it so they follow you to a new phone; as a guest they stay on your device.</li>
+          <li><strong>Usage data</strong> — Recipes you save, cook or skip (your cook history and Taste Memory), the feedback you give on a recipe after cooking it, and any recipe you report (with the optional note you write). Used to improve your recommendations and to keep the recipe library accurate and safe.</li>
+          <li><strong>Things you create</strong> — Your Fine-Tune Presets and your shopping list, kept with your account.</li>
           <li><strong>Purchase information</strong> — Your subscription status, managed by RevenueCat and Apple. We never see your payment details.</li>
           <li><strong>Crash &amp; diagnostic data</strong> — Anonymous crash reports via Sentry so we can fix bugs. You can turn this off any time in Settings › Crash &amp; Error Reporting.</li>
           <li><strong>No advertising or tracking</strong> — No ad SDKs, no cross-app tracking, and we never sell your data to anyone.</li>
@@ -66,7 +67,7 @@
         <h2>How We Use Your Data</h2>
         <ul>
           <li>To generate personalised meal recommendations via AI.</li>
-          <li>To keep your saved meals and cooking history with your account.</li>
+          <li>To keep your preferences, saved meals, presets, shopping list and cooking history with your account, so they are there on any phone you sign in on.</li>
           <li>To process your subscription (if you choose Premium).</li>
           <li>To diagnose and fix crashes (only if crash reporting is enabled).</li>
         </ul>
@@ -99,7 +100,7 @@
         <h2>Data Storage &amp; Security</h2>
         <ul>
           <li>Account data is stored in Supabase (hosted on AWS in Stockholm, Sweden) with Row-Level Security.</li>
-          <li>Preferences are stored only on your device and are not uploaded to our servers, except as part of a recipe request described above.</li>
+          <li>For signed-in users, preferences, cook history, presets and the shopping list are stored with the account in Supabase, readable only by you. Signing out removes them from the phone. Guests' data stays on their device.</li>
           <li>All network communication uses HTTPS encryption.</li>
         </ul>
       </div>
@@ -118,7 +119,7 @@
       <div class="card">
         <h2>How Long We Keep Data</h2>
         <ul>
-          <li>Account data, saved meals and history are kept until you delete your account, and are then removed. Preferences stay on your device until you change them, delete your account or delete the app.</li>
+          <li>Account data, preferences, saved meals, presets, shopping list and history are kept until you delete your account, and are then removed.</li>
           <li>Anonymous crash reports are kept for no longer than 90 days.</li>
           <li>Requests sent for AI recipe generation contain no account details and are not kept by us.</li>
         </ul>
