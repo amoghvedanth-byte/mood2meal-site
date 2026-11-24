@@ -15,7 +15,7 @@
   <meta name="theme-color" content="#121411" media="(prefers-color-scheme: dark)" />
   <link rel="icon" type="image/png" href="assets/icon-64.png" />
   <link rel="apple-touch-icon" href="assets/icon-180.png" />
-<link rel="stylesheet" href="styles.css"/><link rel="stylesheet" href="quiet-kitchen.css"/><link rel="stylesheet" href="editorial-preview/editorial.css"/></head>
+<link rel="stylesheet" href="styles.css"/><link rel="stylesheet" href="quiet-kitchen.css"/><link rel="stylesheet" href="editorial-preview/editorial.css"/><link rel="stylesheet" href="assets/meal-orbit.css" /><link rel="stylesheet" href="assets/motion-site.css" /><script>matchMedia('(prefers-reduced-motion: reduce)').matches||(document.documentElement.classList.add('m-js'),setTimeout(function(){window.__m2mMotion||document.documentElement.classList.remove('m-js')},2500))</script></head>
 <body class="landing">
   <a class="skip" href="#main">Skip to content</a>
 
@@ -55,7 +55,28 @@
           </div>
           <p class="note">No ads. No tracking. Your choices stay yours.</p>
         </div>
-        <div class="meal-stage" data-new-content tabindex="0" role="region" aria-label="Meal photographs with illustrative mood tags. On small screens swipe or use arrow keys to see all three meals."><figure class="hero-meal"><div class="meal-frame"><img src="static-meals/calming-soup.jpg" alt="Roasted carrot and lentil soup" width="1254" height="1254" fetchpriority="high"/></div><figcaption><span class="photo-tag mood">Calming</span><span class="photo-tag">Low energy</span></figcaption></figure><figure class="hero-meal"><div class="meal-frame"><img src="assets/quiet-kitchen.jpg" alt="Rigatoni with tomato, basil and parmesan" width="1254" height="1254" fetchpriority="high"/></div><figcaption><span class="photo-tag mood">Comforting</span><span class="photo-tag">Low energy</span></figcaption></figure><figure class="hero-meal"><div class="meal-frame"><img src="static-meals/uplifting-salmon.jpg" alt="Seared salmon and quinoa bowl" width="1254" height="1254" fetchpriority="high"/></div><figcaption><span class="photo-tag mood">Uplifting</span><span class="photo-tag">Okay</span></figcaption></figure></div><p class="hero-gallery-note" data-new-content>Illustrative mood-to-meal pairings</p>
+        <div class="meal-orbit" data-orbit tabindex="0" role="region" aria-roledescription="carousel" aria-label="Example meals for each mood. Use the arrow keys or the buttons to change meal.">
+          <div class="orbit-pager" role="group" aria-label="Choose a mood"><button type="button" class="orbit-dot" data-go="0" aria-label="Calming" aria-current="true"><i></i></button><button type="button" class="orbit-dot" data-go="1" aria-label="Comforting"><i></i></button><button type="button" class="orbit-dot" data-go="2" aria-label="Uplifting"><i></i></button><button type="button" class="orbit-dot" data-go="3" aria-label="Indulgent"><i></i></button></div>
+          <div class="orbit-stage">
+            <svg class="orbit-band" viewBox="-300 -300 600 600" aria-hidden="true"><path fill="#c9d8bd"/></svg>
+            <figure class="orbit-plate is-current" data-accent="#c9d8bd"><div class="meal-frame"><img src="static-meals/calming-soup.jpg" alt="Roasted carrot and lentil soup" width="1254" height="1254" fetchpriority="high" decoding="async"/></div></figure>
+            <figure class="orbit-plate" data-accent="#efc5aa" aria-hidden="true"><div class="meal-frame"><img src="assets/quiet-kitchen.jpg" alt="Rigatoni with tomato, basil and parmesan" width="1254" height="1254" loading="lazy" decoding="async"/></div></figure>
+            <figure class="orbit-plate" data-accent="#f0dc96" aria-hidden="true"><div class="meal-frame"><img src="static-meals/uplifting-salmon.jpg" alt="Seared salmon and quinoa bowl" width="1254" height="1254" loading="lazy" decoding="async"/></div></figure>
+            <figure class="orbit-plate" data-accent="#dcc0a6" aria-hidden="true"><div class="meal-frame"><img src="static-meals/indulgent-mushrooms.jpg" alt="Sautéed mushrooms and whipped ricotta on toasted sourdough" width="1254" height="1254" loading="lazy" decoding="async"/></div></figure>
+          </div>
+          <div class="orbit-info">
+            <div class="orbit-copy is-current"><p class="orbit-eyebrow">If you're feeling</p><h2 class="orbit-title"><span class="orbit-mood">Calming</span><span class="orbit-dish">Carrot and lentil soup</span></h2><p class="orbit-tags"><span class="photo-tag mood">Calming</span><span class="photo-tag">Low energy</span></p><p class="orbit-line">Velvety and warm, with a swirl of yoghurt and toasted seeds. Gentle on a heavy day.</p></div>
+            <div class="orbit-copy" aria-hidden="true"><p class="orbit-eyebrow">If you're feeling</p><h2 class="orbit-title"><span class="orbit-mood">Comforting</span><span class="orbit-dish">Tomato rigatoni</span></h2><p class="orbit-tags"><span class="photo-tag mood">Comforting</span><span class="photo-tag">Low energy</span></p><p class="orbit-line">Slow tomato sauce, basil and a snow of parmesan. One pot, no fuss.</p></div>
+            <div class="orbit-copy" aria-hidden="true"><p class="orbit-eyebrow">If you're feeling</p><h2 class="orbit-title"><span class="orbit-mood">Uplifting</span><span class="orbit-dish">Salmon and quinoa bowl</span></h2><p class="orbit-tags"><span class="photo-tag mood">Uplifting</span><span class="photo-tag">Okay</span></p><p class="orbit-line">Seared salmon, crisp vegetables and a squeeze of lemon. Bright without being a project.</p></div>
+            <div class="orbit-copy" aria-hidden="true"><p class="orbit-eyebrow">If you're feeling</p><h2 class="orbit-title"><span class="orbit-mood">Indulgent</span><span class="orbit-dish">Mushroom toast</span></h2><p class="orbit-tags"><span class="photo-tag mood">Indulgent</span><span class="photo-tag">Okay</span></p><p class="orbit-line">Buttery mushrooms and whipped ricotta on thick sourdough. A small treat that still counts as dinner.</p></div>
+            <div class="orbit-controls">
+              <button type="button" class="orbit-arrow" data-step="-1" aria-label="Previous meal"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+              <div class="orbit-thumbs"><button type="button" class="orbit-thumb" data-go="0" aria-label="Calming: Carrot and lentil soup" aria-current="true"><img src="static-meals/calming-soup.jpg" alt="" width="52" height="52" loading="lazy" decoding="async"/><span>Calming</span></button><button type="button" class="orbit-thumb" data-go="1" aria-label="Comforting: Tomato rigatoni"><img src="assets/quiet-kitchen.jpg" alt="" width="52" height="52" loading="lazy" decoding="async"/><span>Comforting</span></button><button type="button" class="orbit-thumb" data-go="2" aria-label="Uplifting: Salmon and quinoa bowl"><img src="static-meals/uplifting-salmon.jpg" alt="" width="52" height="52" loading="lazy" decoding="async"/><span>Uplifting</span></button><button type="button" class="orbit-thumb" data-go="3" aria-label="Indulgent: Mushroom toast"><img src="static-meals/indulgent-mushrooms.jpg" alt="" width="52" height="52" loading="lazy" decoding="async"/><span>Indulgent</span></button></div>
+              <button type="button" class="orbit-arrow" data-step="1" aria-label="Next meal"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+            </div>
+          </div>
+          <p class="orbit-sr" aria-live="polite"></p>
+        </div><p class="hero-gallery-note" data-new-content>Illustrative mood-to-meal pairings</p>
       </div>
     </div>
 
@@ -97,15 +118,15 @@
           <li>
             <h3>Say how you feel</h3>
             <p>Pick your mood and how much effort you have in you tonight.</p>
-          <figure class="app-phone light" data-app-screen><img src="editorial-preview/mood-light.jpg?v=20261123" alt="The Mood2Meal home screen: the Right Now card, then Or tell us how you feel with Low energy picked from the Favourite preset" width="828" height="1792" loading="lazy" decoding="async"/></figure></li>
+          <figure class="app-phone light" data-app-screen><img src="editorial-preview/mood-light.png" alt="Actual Mood2Meal app: Low energy and Comforting selected in light mode" width="1179" height="2556" loading="lazy" decoding="async"/></figure></li>
           <li>
             <h3>Get one meal</h3>
             <p>Mood2Meal suggests a meal that fits the moment, your diet and your kitchen. Not feeling it? Ask for another.</p>
-          <figure class="app-phone light" data-app-screen><img src="editorial-preview/meal-light.jpg?v=20261123" alt="Mood2Meal suggesting teriyaki chicken donburi for Energized, Comforting and Uplifting: 30 minutes, serves 2" width="828" height="1792" loading="lazy" decoding="async"/></figure></li>
+          <figure class="app-phone" data-app-screen><img src="editorial-preview/meal-dark.png" alt="Actual Mood2Meal app suggesting salmon rice bowl with nori and mayo" width="1179" height="2556" loading="lazy" decoding="async"/></figure></li>
           <li>
             <h3>Cook it, step by step</h3>
-            <p>Follow clear steps with amounts and timers that keep going when you lock your phone. Missing an ingredient? With Premium, the recipe adjusts.</p>
-          <figure class="app-phone light" data-app-screen><img src="editorial-preview/cooking-light.jpg?v=20261123" alt="Step 6 of 9 for teriyaki chicken donburi, with a five-minute timer ready to start" width="828" height="1792" loading="lazy" decoding="async"/></figure></li>
+            <p>Follow clear steps with amounts and timers. Missing an ingredient? The recipe can adjust.</p>
+          <figure class="app-phone" data-app-screen><img src="editorial-preview/cooking-dark.png" alt="Actual Mood2Meal cooking instructions for the salmon rice bowl in dark mode" width="1179" height="2556" loading="lazy" decoding="async"/></figure></li>
         </ol>
       </div>
     </section>
@@ -118,17 +139,15 @@
         </div>
         <div class="grid two">
           <div class="card with-screen right-now-card"><div><h3>Right Now</h3>
-<p>One tap and Mood2Meal picks a one-pan meal for you instantly. No choices at all.</p></div><figure class="app-phone light" data-app-screen><img src="editorial-preview/right-now-light.jpg" alt="Right Now picking chilli crisp fried eggs on rice: eight minutes, one pan, low effort" width="828" height="1792" loading="lazy" decoding="async"/></figure></div>
-          <div class="card with-screen"><div><h3>Use what I have <span class="premium-tag">Premium</span></h3>
-<p>Type what's in your kitchen and get a meal you can make from it. If our library has nothing that fits, we make one for you.</p></div><figure class="app-phone light" data-app-screen><img src="editorial-preview/pantry-light.jpg?v=20261123" alt="Use what I have: mushroom, garlic and basil typed in, with tomato and pasta ticked as staples" width="828" height="1792" loading="lazy" decoding="async"/></figure></div>
-          <div class="card with-screen full-screen"><div><h3>Fine-Tune Presets</h3>
-<p>Save the way you like to eat on a weeknight or a Friday, and bring it back with one tap. Your diet and allergies always apply.</p></div><figure class="app-phone light" data-app-screen><img src="editorial-preview/presets-light.jpg?v=20261123" alt="The Presets sheet with three saved presets, Friday treat, Saturday night and Favourite, each one tap away" width="828" height="1792" loading="lazy" decoding="async"/></figure></div>
-          <div class="card with-screen"><div><h3>Smart Shopping List <span class="premium-tag">Premium</span></h3>
-<p>A shopping list built automatically from the meals you choose.</p></div><figure class="app-phone light" data-app-screen><img src="editorial-preview/shopping-light.jpg?v=20261123" alt="Smart Shopping List built from saved meals, with ingredients and amounts grouped by aisle" width="828" height="1792" loading="lazy" decoding="async"/></figure></div>
-          <div class="card wide">
-            <h3>Timers that keep going</h3>
-            <p>Start a timer, lock your phone or move on to the next step, and you'll get an alert the moment it's done.</p>
+<p>One tap and Mood2Meal picks a one-pan meal for you instantly. No choices at all.</p></div><figure class="app-phone" data-app-screen><img src="editorial-preview/right-now-dark.png" alt="Actual Right Now mode: chilli crisp fried eggs on rice, eight minutes, one pan, low effort" width="1179" height="2556" loading="lazy" decoding="async"/></figure></div>
+          <div class="card with-screen"><div><h3>Pantry Pulse</h3>
+<p>Not sure what you have? Start from what's in your kitchen and cook from that.</p></div><figure class="app-phone light" data-app-screen><img src="editorial-preview/pantry-light.png" alt="Actual Pantry Pulse screen: ingredients and common staples in your kitchen" width="1179" height="2556" loading="lazy" decoding="async"/></figure></div>
+          <div class="card">
+            <h3>Cook History</h3>
+            <p>Every meal you finish is kept, so you can find it and cook it again.</p>
           </div>
+          <div class="card with-screen"><div><h3>Smart Shopping List</h3>
+<p>A shopping list built automatically from the meals you choose.</p></div><figure class="app-phone light" data-app-screen><img src="editorial-preview/shopping-light.png" alt="Actual Smart Shopping List screen with saved meals and ingredients" width="1179" height="2556" loading="lazy" decoding="async"/></figure></div>
         </div>
       </div>
     </section>
@@ -139,8 +158,8 @@
           <span class="eyebrow">Premium</span>
           <h2>Stress-proof cooking, <em>over time.</em></h2>
           <p>
-            Free covers your everyday meal decisions: up to 15 meals a day, 10 saved recipes and
-            one preset. Premium adds recipes made for you and more room for everything else.
+            Free covers your core meal decisions. Premium unlocks recipes made for you, deeper
+            history and advanced controls.
           </p>
           <p class="fine">
             Monthly and yearly plans are available. Prices are shown in the app in your local
@@ -149,12 +168,10 @@
         </div>
         <div class="card">
           <ul class="ticks">
-            <li>40 AI recipes and swaps a month</li>
-            <li>Unlimited meals and saves</li>
+            <li>Unlimited saves</li>
             <li>Your full Cook History</li>
-            <li>Cook from what you have</li>
-            <li>Smart shopping list</li>
-            <li>Unlimited Fine-Tune Presets</li>
+            <li>Smart Shopping List</li>
+            <li>Fine-Tune Presets</li>
           </ul>
         </div>
       </div>
@@ -203,5 +220,5 @@
       </nav>
     </div>
   </footer>
-<script src="editorial-preview/editorial.js" defer></script></body>
+<script src="assets/vendor/motion.js" defer></script><script src="assets/motion-site.js" defer></script><script src="assets/meal-orbit.js" defer></script></body>
 </html>

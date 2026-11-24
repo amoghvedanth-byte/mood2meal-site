@@ -1,0 +1,74 @@
+/* Meal orbit: the hero's mood-to-meal carousel. Plates swing round a pivot above the stage,
+   the two-line title wipes across, and a pastel band behind the plate takes each mood's colour.
+   All movement is driven by Motion in assets/meal-orbit.js. Without JavaScript the first meal shows on its own. */
+
+.meal-orbit{position:relative;max-width:1060px;margin:34px auto 0;padding:0 24px;display:grid;grid-template-columns:44px minmax(0,420px) minmax(0,1fr);gap:0 46px;align-items:center;outline:none}
+.meal-orbit:focus-visible{outline:2px solid var(--accent);outline-offset:6px;border-radius:24px}
+
+/* Side pager */
+.orbit-pager{position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;gap:6px}
+.orbit-dot{appearance:none;border:0;background:none;padding:0;width:22px;height:14px;display:grid;place-items:center;cursor:pointer}
+.orbit-dot i{display:block;width:4px;height:4px;border-radius:4px;background:var(--text);opacity:.35}
+.orbit-dot[aria-current="true"]{height:34px}
+.orbit-dot[aria-current="true"] i{height:26px;opacity:.85;background:var(--accent)}
+.orbit-dot:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:6px}
+
+/* Plate and band */
+.orbit-stage{position:relative;aspect-ratio:1;width:100%;touch-action:pan-y;isolation:isolate}
+.orbit-band{position:absolute;left:50%;top:50%;width:150%;height:150%;transform:translate(-50%,-50%);overflow:visible;pointer-events:none;z-index:-1}
+.orbit-band path{opacity:.62}
+.orbit-plate{position:absolute;inset:0;margin:0;transform-origin:50% -95%;will-change:transform}
+.orbit-plate .meal-frame{width:100%;height:100%}
+.orbit-plate img{width:100%;height:100%;object-fit:cover;user-select:none;-webkit-user-drag:none}
+
+/* Title, tags and line */
+.orbit-info{position:relative;display:grid;align-content:center}
+.orbit-copy{grid-area:1/1}
+.orbit-eyebrow{font-size:10px;letter-spacing:2.4px;text-transform:uppercase;font-weight:600;color:var(--accent);margin:0 0 14px;display:inline-flex;align-items:center;gap:12px}
+.orbit-eyebrow::before{content:'';width:24px;height:1px;background:currentColor;opacity:.65}
+.orbit-title{margin:0;font-weight:400;line-height:1.02;letter-spacing:-2px}
+.orbit-mood,.orbit-dish{display:block;font-family:var(--display)}
+.orbit-mood{font-style:italic;color:#6c805b;font-size:clamp(46px,5.4vw,74px)}
+.orbit-dish{color:var(--text);font-size:clamp(30px,3.3vw,44px);letter-spacing:-1.2px;margin-top:8px}
+.orbit-tags{display:flex;gap:6px;margin:20px 0 0}
+.orbit-line{font-size:14px;line-height:1.8;color:var(--text-2);max-width:380px;margin:16px 0 0}
+
+/* Controls: arrows and thumbnails */
+.orbit-controls{grid-area:2/1;margin-top:28px;display:none;align-items:center;gap:8px}
+.orbit-js .orbit-controls{display:flex}
+.orbit-arrow{appearance:none;border:1px solid var(--border-strong);background:transparent;color:var(--text);width:40px;height:40px;border-radius:999px;display:grid;place-items:center;cursor:pointer;flex:none}
+.orbit-arrow svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.orbit-thumbs{display:flex;gap:8px;margin:0 4px}
+.orbit-thumb{appearance:none;border:0;background:transparent;padding:6px 6px 8px;border-radius:16px;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:6px;width:76px;color:var(--text-2)}
+.orbit-thumb img{width:52px;height:52px;border-radius:14px;object-fit:cover;border:3px solid #fffdf7;box-shadow:0 4px 10px #33422b14}
+.orbit-thumb span{font-size:10px;line-height:1.25;font-weight:600;letter-spacing:.2px}
+.orbit-thumb[aria-current="true"]{background:#fffdf7;color:var(--text);box-shadow:0 10px 22px -14px #33422b55}
+.orbit-arrow:focus-visible,.orbit-thumb:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+
+.orbit-sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* Stacked plates and titles: only the current one shows */
+.orbit-plate:not(:first-child),.orbit-copy:not(:first-child){visibility:hidden;opacity:0}
+.orbit-js .orbit-plate,.orbit-js .orbit-copy{visibility:hidden;opacity:0}
+.orbit-js .orbit-plate.is-current,.orbit-js .orbit-copy.is-current{visibility:visible;opacity:1}
+
+/* Wide screens: the pager stands clear of the band */
+@media (min-width:1180px){.orbit-pager{left:-96px}}
+
+@media (max-width:860px){
+  .meal-orbit{grid-template-columns:minmax(0,1fr);justify-items:center;gap:0;margin-top:22px}
+  .orbit-pager{display:none}
+  .orbit-stage{width:min(76vw,380px)}
+  .orbit-info{width:100%;max-width:460px;margin-top:26px;text-align:center}
+  .orbit-eyebrow{justify-content:center}
+  .orbit-tags{justify-content:center}
+  .orbit-line{margin-inline:auto}
+  .orbit-controls{justify-self:center;margin-top:22px}
+}
+@media (max-width:540px){
+  .meal-orbit{padding:0 16px}
+  .orbit-mood{font-size:46px}
+  .orbit-dish{font-size:28px}
+  .orbit-arrow{display:none}
+  .orbit-thumb{width:70px}
+}

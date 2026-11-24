@@ -1,0 +1,22 @@
+/* Motion layer. Active only while <html> has .m-js, which the inline head script adds
+   (skipped for prefers-reduced-motion, and removed again if Motion fails to load).
+   Motion owns every animation and hover transition, so CSS ones are switched off here. */
+
+.m-js *, .m-js *::before, .m-js *::after { animation: none !important; transition: none !important; }
+
+/* Hidden until Motion reveals them. */
+.m-js .hero-copy > *, .m-js .meal-orbit, .m-js .hero-gallery-note,
+.m-js main .section-head > *, .m-js main .grid > .card, .m-js .steps > li, .m-js #premium .split > .card,
+.m-js .ticks li, .m-js .cta .wrap > *, .m-js .closing-art, .m-js .doc .wrap > * { opacity: 0; }
+
+/* Printing never waits for a scroll reveal. */
+@media print { .m-js * { opacity: 1 !important; } }
+
+/* Hover end states Motion now animates instead of CSS snapping to them. */
+.m-js .nav a, .m-js .site-footer a { text-decoration: underline; text-decoration-color: transparent; text-underline-offset: 7px; }
+.m-js .nav a:not([aria-current]):hover { color: var(--text-2); text-decoration-color: transparent; }
+.m-js .site-footer a:hover { color: var(--text-2); text-decoration-color: transparent; }
+.m-js .btn-primary:hover { filter: none; }
+.m-js .btn-ghost:hover { transform: none; }
+.m-js .tools .card:hover { transform: none; box-shadow: none; }
+.m-js .faq summary:hover { background: transparent; }
